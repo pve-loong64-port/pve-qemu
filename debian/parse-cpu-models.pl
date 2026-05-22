@@ -76,6 +76,9 @@ while (my $line = <STDIN>) {
         } elsif ($model =~ m/^(a64fx|cortex-|neoverse-).*$/) {
             $cpu_models->{$model} = 'ARM';
             next;
+	} elsif ($model =~ m/^la\d{3}$/) {
+            $cpu_models->{$model} = 'Loongson';
+            next;
         }
         die "unable to deal with line '$line' - implement me"
     } elsif ($info =~ m/^\(deprecated\)$/) {
