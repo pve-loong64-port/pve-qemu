@@ -14,7 +14,7 @@ while (<STDIN>) {
 
     s/^\s+//;
     my @machine = split(/\s+/);
-    next if $machine[0] !~ m/^pc-(i440fx|q35)-(.+)$/ && $machine[0] !~ m/^(virt)-(.+)$/;
+    next if $machine[0] !~ m/^pc-(i440fx|q35)-(.+)$/ && $machine[0] !~ m/^(virt)-(.+)$/ && (($_ !~ m/\(default\)/) || $machine[0] !~ m/^(virt)$/);
     push @$machines, {
         'id' => $machine[0],
         'type' => $1,
