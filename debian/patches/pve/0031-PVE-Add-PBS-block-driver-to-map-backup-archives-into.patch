@@ -348,10 +348,10 @@ index 0000000000..3e41421716
 +
 +block_init(bdrv_pbs_init);
 diff --git a/meson.build b/meson.build
-index 7111b47319..4115c35884 100644
+index b7a8702711..4a2c4e981f 100644
 --- a/meson.build
 +++ b/meson.build
-@@ -5003,7 +5003,7 @@ summary_info += {'Query Processing Library support': qpl}
+@@ -5004,7 +5004,7 @@ summary_info += {'Query Processing Library support': qpl}
  summary_info += {'UADK Library support': uadk}
  summary_info += {'qatzip support':    qatzip}
  summary_info += {'NUMA host support': numa}

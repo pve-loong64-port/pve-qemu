@@ -33,7 +33,7 @@ Signed-off-by: Fiona Ebner <f.ebner@proxmox.com>
  1 file changed, 29 insertions(+)
 
 diff --git a/hw/display/qxl.c b/hw/display/qxl.c
-index 3d4b563556..33637cabbf 100644
+index 39a860c246..41d4ce9571 100644
 --- a/hw/display/qxl.c
 +++ b/hw/display/qxl.c
 @@ -1497,6 +1497,7 @@ static void qxl_create_guest_primary(PCIQXLDevice *qxl, int loadvm,

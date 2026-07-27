@@ -30,7 +30,7 @@ Signed-off-by: Fiona Ebner <f.ebner@proxmox.com>
  2 files changed, 17 insertions(+), 11 deletions(-)
 
 diff --git a/hw/display/virtio-gpu.c b/hw/display/virtio-gpu.c
-index 0ef7a40510..4661ac9674 100644
+index 10f55bd2ae..c83cbfca45 100644
 --- a/hw/display/virtio-gpu.c
 +++ b/hw/display/virtio-gpu.c
 @@ -617,6 +617,11 @@ void virtio_gpu_update_scanout(VirtIOGPU *g,
@@ -66,7 +66,7 @@ index 0ef7a40510..4661ac9674 100644
          *error = VIRTIO_GPU_RESP_ERR_INVALID_PARAMETER;
          return false;
      }
-@@ -708,6 +714,7 @@ static void virtio_gpu_set_scanout(VirtIOGPU *g,
+@@ -712,6 +718,7 @@ static void virtio_gpu_set_scanout(VirtIOGPU *g,
      struct virtio_gpu_simple_resource *res;
      struct virtio_gpu_framebuffer fb = { 0 };
      struct virtio_gpu_set_scanout ss;
@@ -74,7 +74,7 @@ index 0ef7a40510..4661ac9674 100644
  
      VIRTIO_GPU_FILL_CMD(ss);
      virtio_gpu_bswap_32(&ss, sizeof(ss));
-@@ -733,11 +740,11 @@ static void virtio_gpu_set_scanout(VirtIOGPU *g,
+@@ -737,11 +744,11 @@ static void virtio_gpu_set_scanout(VirtIOGPU *g,
      }
  
      fb.format = pixman_image_get_format(res->image);
@@ -88,7 +88,7 @@ index 0ef7a40510..4661ac9674 100644
  
      virtio_gpu_do_set_scanout(g, ss.scanout_id,
                                &fb, res, &ss.r, &cmd->error);
-@@ -748,6 +755,7 @@ bool virtio_gpu_scanout_blob_to_fb(struct virtio_gpu_framebuffer *fb,
+@@ -752,6 +759,7 @@ bool virtio_gpu_scanout_blob_to_fb(struct virtio_gpu_framebuffer *fb,
                                     uint64_t blob_size)
  {
      uint64_t fbend;
@@ -96,7 +96,7 @@ index 0ef7a40510..4661ac9674 100644
  
      fb->format = virtio_gpu_get_pixman_format(ss->format);
      if (!fb->format) {
-@@ -757,19 +765,19 @@ bool virtio_gpu_scanout_blob_to_fb(struct virtio_gpu_framebuffer *fb,
+@@ -761,19 +769,19 @@ bool virtio_gpu_scanout_blob_to_fb(struct virtio_gpu_framebuffer *fb,
          return false;
      }
  
@@ -120,7 +120,7 @@ index 0ef7a40510..4661ac9674 100644
  
      fbend = fb->offset;
      fbend += (uint64_t) fb->stride * ss->r.height;
-@@ -1219,8 +1227,7 @@ static const VMStateDescription vmstate_virtio_gpu_scanout = {
+@@ -1223,8 +1231,7 @@ static const VMStateDescription vmstate_virtio_gpu_scanout = {
          VMSTATE_UINT32(cursor.pos.y, struct virtio_gpu_scanout),
          VMSTATE_UINT32_TEST(fb.format, struct virtio_gpu_scanout,
                              scanout_vmstate_after_v2),

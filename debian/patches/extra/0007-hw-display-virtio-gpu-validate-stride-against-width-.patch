@@ -34,7 +34,7 @@ Signed-off-by: Fiona Ebner <f.ebner@proxmox.com>
  1 file changed, 16 insertions(+)
 
 diff --git a/hw/display/virtio-gpu.c b/hw/display/virtio-gpu.c
-index b998ce8324..0ef7a40510 100644
+index 81d65ec57c..10f55bd2ae 100644
 --- a/hw/display/virtio-gpu.c
 +++ b/hw/display/virtio-gpu.c
 @@ -646,6 +646,14 @@ static bool virtio_gpu_do_set_scanout(VirtIOGPU *g,
@@ -52,7 +52,7 @@ index b998ce8324..0ef7a40510 100644
      g->parent_obj.enable = 1;
  
      if (res->blob) {
-@@ -753,6 +761,14 @@ bool virtio_gpu_scanout_blob_to_fb(struct virtio_gpu_framebuffer *fb,
+@@ -757,6 +765,14 @@ bool virtio_gpu_scanout_blob_to_fb(struct virtio_gpu_framebuffer *fb,
      fb->width = ss->width;
      fb->height = ss->height;
      fb->stride = ss->strides[0];

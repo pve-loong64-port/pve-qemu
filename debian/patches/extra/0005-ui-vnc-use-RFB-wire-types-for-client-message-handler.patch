@@ -27,7 +27,7 @@ Signed-off-by: Fiona Ebner <f.ebner@proxmox.com>
  1 file changed, 17 insertions(+), 22 deletions(-)
 
 diff --git a/ui/vnc.c b/ui/vnc.c
-index d2ae127f0b..949ad2aad9 100644
+index 3a041926bf..1f06cf04a7 100644
 --- a/ui/vnc.c
 +++ b/ui/vnc.c
 @@ -614,15 +614,7 @@ bool vnc_display_reload_certs(const char *id, Error **errp)
@@ -113,7 +113,7 @@ index d2ae127f0b..949ad2aad9 100644
  {
      if (!true_color_flag) {
          /* Expose a reasonable default 256 color map */
-@@ -2292,15 +2287,15 @@ static void set_pixel_format(VncState *vs, int bits_per_pixel,
+@@ -2297,15 +2292,15 @@ static void set_pixel_format(VncState *vs, int bits_per_pixel,
      vs->client_pf.rmax = red_max ? red_max : 0xFF;
      vs->client_pf.rbits = ctpopl(red_max);
      vs->client_pf.rshift = red_shift;

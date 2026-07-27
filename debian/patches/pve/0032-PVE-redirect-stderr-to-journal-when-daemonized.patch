@@ -14,7 +14,7 @@ Signed-off-by: Thomas Lamprecht <t.lamprecht@proxmox.com>
  2 files changed, 7 insertions(+), 3 deletions(-)
 
 diff --git a/meson.build b/meson.build
-index 4115c35884..87c765f622 100644
+index 4a2c4e981f..652138ca4b 100644
 --- a/meson.build
 +++ b/meson.build
 @@ -2156,6 +2156,7 @@ endif

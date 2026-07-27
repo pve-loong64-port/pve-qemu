@@ -263,7 +263,7 @@ index abebfea0e2..bc727a3a6a 100644
  void hmp_device_add(Monitor *mon, const QDict *qdict);
  void hmp_device_del(Monitor *mon, const QDict *qdict);
 diff --git a/meson.build b/meson.build
-index a88b007017..684501a185 100644
+index dd3ca2bcbc..1eee80f7d8 100644
 --- a/meson.build
 +++ b/meson.build
 @@ -2156,6 +2156,7 @@ endif
