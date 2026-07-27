@@ -1,3 +1,24 @@
+pve-qemu-kvm (11.0.3-1) trixie; urgency=medium
+
+  * update submodule and patches to QEMU 11.0.3, which brings fixes for the
+    USB, SCSI, NVMe and display device models, corrects SCSI persistent
+    reservation handling and restricts guest-facing DMA paths in the intel-hda
+    and ivshmem devices. All security and stability patches that were
+    backported for the previous release are part of this point release now and
+    could be dropped downstream.
+
+  * more stable fixes for QEMU 11.0, addressing guest-triggerable assertion
+    failures and crashes in the IDE, xHCI, USB core, SCSI disk, VMware SVGA
+    and virtio device models, a read-only export bypass and a use-after-free
+    on device removal in the 9p file sharing server, and dangling callbacks
+    left behind when unplugging a QXL display device.
+
+  * vfio: reject out-of-range PCI interrupt pins and stop mistaking a failed
+    config space read for valid all-ones data, which could abort QEMU shortly
+    after starting a VM with a passed-through GPU.
+
+ -- Proxmox Support Team <support@proxmox.com>  Mon, 27 Jul 2026 23:27:20 +0200
+
 pve-qemu-kvm (11.0.2-2) trixie; urgency=medium
 
   * more stable fixes for QEMU 11.0, including various display drivers and the
