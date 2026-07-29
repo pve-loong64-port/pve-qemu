@@ -23,6 +23,7 @@ extra/0022-hw-9pfs-fix-O_TRUNC-bypass-on-read-only-export.patch
 extra/0023-hw-9pfs-virtio-drain-in-flight-PDUs-before-virtio-9p.patch
 extra/0024-vfio-pci-don-t-narrow-a-failed-config-read-to-a-plau.patch
 extra/0025-vfio-pci-reject-invalid-PCI_INTERRUPT_PIN-values.patch
+extra/0026-hw-scsi-lsi53c895a-gracefully-handle-re-entrant-DMA.patch
 bitmap-mirror/0001-drive-mirror-add-support-for-sync-bitmap-mode-never.patch
 bitmap-mirror/0002-drive-mirror-add-support-for-conditional-and-always-.patch
 bitmap-mirror/0003-mirror-add-check-for-bitmap-mode-without-bitmap.patch
