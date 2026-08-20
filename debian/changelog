@@ -1,3 +1,14 @@
+pve-qemu-kvm (11.0.3-3) trixie; urgency=medium
+
+  * pbs-restore: add an optional flag to skip the host page cache when
+    restoring a disk image. On ZFS, page writeback hands the restored data to
+    the zvol one page at a time, which forces a read-modify-write of the
+    surrounding volume block and can stall I/O of unrelated VMs for the
+    duration of the restore. qemu-server uses the new flag for restores to
+    zvols.
+
+ -- Proxmox Support Team <support@proxmox.com>  Thu, 20 Aug 2026 23:19:02 +0200
+
 pve-qemu-kvm (11.0.3-2) trixie; urgency=medium
 
   * add fix for re-entrant DMA issue with LSI SCSI controllers
